@@ -19,6 +19,9 @@ public class User {
 
 	public User(int id,String username) {
 		super();
+		if(id<=0)
+			throw new IllegalArgumentException("ID has to be greater than 0");
+		
 		this.id = id;
 		this.username = username;
 	}
